@@ -1,29 +1,26 @@
-version: 2
-jobs:
-  build-and-test:
-    macos:
-      xcode: "9.4.1"
-    working_directory: ~/Users/wonderland/CircleCITestiOS
-    environment:
-      FASTLANE_LANE: all
-    shell: /bin/bash --login
-    steps:
-      - checkout
-      - run:
-          command: base64 -D -o Certificates.p12 <<< $Certificates
-      - run:
-          command: mkdir -pv ~/Library/MobileDevice/Provisioning\ Profiles/
-      - run:
-          command: base64 -D -o ~/Library/MobileDevice/Provisioning\ Profiles/App_Store.mobileprovision <<< $App_Store_Profile
-      - run:
-          working_directory: ~/yourProyect/whatever
-          command: bundle install
-      - run:
-          working_directory: ~/Users/wonderland/CircleCITestiOS/TestCircleCI
-          command: bundle exec fastlane $FASTLANE_LANE circleci:true
+general:
+  # if the application is *not* in the root of the repo but
+  # in the sub-directory called "ios-app"
+  build_dir: ios-app
 
-workflows:
-  version: 2
-  build-and-test:
-    jobs:
-      - build-and-test
+machine:
+  xcode:
+    version: "9.4.1"
+  environment:
+    # please specify your code signing identity name here
+    GYM_CODE_SIGNING_IDENTITY: "Developer: pradeep danagoud (WRRDX5G73R)"
+
+test:
+  override:
+    - set -o pipefail &&
+      xcodebuild
+        CODE_SIGNING_REQUIRED=NO
+        CODE_SIGN_IDENTITY=
+        PROVISIONING_PROFILE=
+        -sdk iphonesimulator
+        -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6'
+        -workspace MyWorkspace.xcworkspace
+        -scheme "My Scheme"
+        clean build test |
+      tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+      xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
