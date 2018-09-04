@@ -14,6 +14,8 @@
 		AF25D6882135433A00DAFF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF25D6862135433A00DAFF22 /* LaunchScreen.storyboard */; };
 		AF25D6932135433B00DAFF22 /* TestCircleCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D6922135433B00DAFF22 /* TestCircleCITests.swift */; };
 		AF25D69E2135433B00DAFF22 /* TestCircleCIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D69D2135433B00DAFF22 /* TestCircleCIUITests.swift */; };
+		AF4A0535213E589D00751628 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0534213E589D00751628 /* Person.swift */; };
+		AF4A0537213E58C000751628 /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0536213E58C000751628 /* PersonTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		AF25D6992135433B00DAFF22 /* TestCircleCIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCircleCIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF25D69D2135433B00DAFF22 /* TestCircleCIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCircleCIUITests.swift; sourceTree = "<group>"; };
 		AF25D69F2135433B00DAFF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4A0534213E589D00751628 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AF4A0536213E58C000751628 /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				AF25D67D2135433700DAFF22 /* AppDelegate.swift */,
 				AF25D67F2135433700DAFF22 /* ViewController.swift */,
+				AF4A0534213E589D00751628 /* Person.swift */,
 				AF25D6812135433700DAFF22 /* Main.storyboard */,
 				AF25D6842135433A00DAFF22 /* Assets.xcassets */,
 				AF25D6862135433A00DAFF22 /* LaunchScreen.storyboard */,
@@ -110,6 +115,7 @@
 		AF25D6912135433B00DAFF22 /* TestCircleCITests */ = {
 			isa = PBXGroup;
 			children = (
+				AF4A0536213E58C000751628 /* PersonTest.swift */,
 				AF25D6922135433B00DAFF22 /* TestCircleCITests.swift */,
 				AF25D6942135433B00DAFF22 /* Info.plist */,
 			);
@@ -256,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4A0535213E589D00751628 /* Person.swift in Sources */,
 				AF25D6802135433700DAFF22 /* ViewController.swift in Sources */,
 				AF25D67E2135433700DAFF22 /* AppDelegate.swift in Sources */,
 			);
@@ -265,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4A0537213E58C000751628 /* PersonTest.swift in Sources */,
 				AF25D6932135433B00DAFF22 /* TestCircleCITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,13 +439,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V65HE6WHJT;
+				DEVELOPMENT_TEAM = 3G3S6J5H7S;
 				INFOPLIST_FILE = TestCircleCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pad.TestCircleCI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charitableimpulse.ChimpProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,13 +457,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V65HE6WHJT;
+				DEVELOPMENT_TEAM = 3G3S6J5H7S;
 				INFOPLIST_FILE = TestCircleCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pad.TestCircleCI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charitableimpulse.ChimpProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
