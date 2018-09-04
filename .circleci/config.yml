@@ -19,7 +19,7 @@ jobs:
           working_directory: ~/yourProyect/whatever
           command: bundle install
       - run:
-          working_directory: ~/yourProyect/whatever
+          working_directory: ~/Users/wonderland/CircleCITestiOS/whatever
           command: bundle exec fastlane $FASTLANE_LANE circleci:true
 
 workflows:
