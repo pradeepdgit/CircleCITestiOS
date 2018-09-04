@@ -4,7 +4,7 @@ jobs:
   build-and-test:
     macos:
       xcode: "9.4.1"
-    working_directory: /Users/wonderland/CircleCITestiOS
+    working_directory: ~/Users/wonderland/CircleCITestiOS
     environment:
       FL_OUTPUT_DIR: output
 
