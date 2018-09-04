@@ -6,6 +6,7 @@ target 'TestCircleCI' do
   use_frameworks!
 
   # Pods for TestCircleCI
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'TestCircleCITests' do
     inherit! :search_paths
